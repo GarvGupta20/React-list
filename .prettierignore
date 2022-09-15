@@ -1,0 +1,4 @@
+#ignore all html files 
+ *.html
+ build
+ dist

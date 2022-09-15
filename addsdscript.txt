@@ -1,0 +1,9 @@
+ "lint": "eslint src/**/*.jsx",
+  "format": "prettier --write src/**/*.jsx",
+  "format:lint": "npm run format && npm run lint",
+  "clear": "rimraf dist .parcel-cache"      
+  
+  
+  do add this in every service worker file as eslint wont work on this /* eslint-disable */
+  
+  
