@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/React-list/static/css/main.d32cde14.css",
+    "main.js": "/React-list/static/js/main.799452a6.js",
+    "service-worker.js": "/React-list/service-worker.js",
+    "index.html": "/React-list/index.html",
+    "main.d32cde14.css.map": "/React-list/static/css/main.d32cde14.css.map",
+    "main.799452a6.js.map": "/React-list/static/js/main.799452a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d32cde14.css",
+    "static/js/main.799452a6.js"
+  ]
+}
