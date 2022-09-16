@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//jshint esversion:6
+import React, { useState } from "react";
+import Title from "./components/Title.js";
+import List from "./components/List.js";
+import Input from "./components/Input.js";
 
 function App() {
+  const [movies, setMovies] = useState([]);
+  const [shows, setShows] = useState([]);
+
+  const handleonClick = (movie, show) => {
+    //console.log("clicked");
+    setMovies((prevstate) => {
+      return [...prevstate, movie];
+    });
+    setShows((prevstate) => {
+      return [...prevstate, show];
+    });
+  };
+
+  //console.log(movies);
+  //console.log(shows);
+
+  const ondeleteClick = (index) => {
+    //console.log("clicked delete");
+    setMovies((prevstate) => {
+      return prevstate.filter((_, m) => m !== index);
+    });
+    setShows((prevstate) => {
+      return prevstate.filter((_, m) => m !== index);
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Title />
+      <List movies={movies} shows={shows} ondeleteClick={ondeleteClick} />
+      <Input handleonClick={handleonClick} />
     </div>
   );
 }
